@@ -1,6 +1,6 @@
 {
   "name": "electron-updater-example",
-  "version": "0.8.1",
+  "version": "1.0.0",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Matt Haggard",
@@ -23,14 +23,19 @@
       "category": "your.app.category.type"
     },
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "publish": [
+        {
+          "provider": "github",
+          "owner": "jagiriotasol",
+          "repo": "auto_update",
+          "private": true,
+          "releaseType": "release"
+        }
+      ]
     },
     "nsis": {
       "oneClick": false
-    },
-    "linux": {
-      "category": "your.app.category.type",
-      "target": "AppImage"
     }
   }
 }
